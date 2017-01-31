@@ -1,1 +1,65 @@
-
+public class Item {
+    private String name, quality;
+    private int num;
+    private double cost, price;
+    
+    public Item()
+    {
+        name = "water";
+        quality = "tap";
+        num = 1;
+        cost = 0;
+        price = 2.50;
+    }
+    
+    public void setName(String n)
+    {
+        name = n;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public void setQuality(String q)
+    {
+        quality = q;
+    }
+    
+    public String getQuality()
+    {
+        return quality;
+    }
+    
+    public void setNum(int n)
+    {
+        num = n;
+    }
+    
+    public int getNum()
+    {
+        return num;
+    }
+    
+    public void setCost(double c)
+    {
+        cost = c;
+    }
+    
+    public double getCost()
+    {
+        return cost;
+    }
+    
+    public void setPrice(double p)
+    {
+        price = p;
+    }
+    
+    public double getPrice()
+    {
+        return price;
+    }
+            
+}

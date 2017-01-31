@@ -1,1 +1,75 @@
+public class store {
+    private String name, location, owner, phoneNum;
+    private item[] list;
+    private int itemCount;
+    
+    public store()
+    {
+        name = "wallmart";
+        location = "NJ";
+        owner = "Bob";
+        phoneNum = "973-123-4567";
+        list[0] = new item();
+        itemCount = 1;
+    }
+    
+    public void setName(String a)
+    {
+        name = a;
+    }
+    
+    public void setLocation(String a)
+    {
+        location = a;
+    }
+    
+    public void setOwner(String a)
+    {
+        owner = a;
+    }
+    
+    public void setPhoneNum(String a)
+    {
+        phoneNum = a;
+    }
+    
+    public void addItem()
+    {
+        itemCount++;
+        list[itemCount] = new item();
+    }
+    
+    public void setItemName(int a, String b)
+    {
+        list[a].setName(b);
+    }
+    
+    public void setItemQuality(int a, String b)
+    {
+        list[a].setQuality(b);
+    }
+    
+    public void setItemStock(int a, int b)
+    {
+        list[a].setNum(b);
+    }
+    
+    public void setItemCost(int a, double b)
+    {
+        list[a].setCost(b);
+    }
+    
+    public void setItemPrice(int a, double b)
+    {
+        list[a].setPrice(b);
+    }
+    
+    public double buyItem(int a)
+    {
+        double c = list[a].getPrice();
+        
+       return c; 
+    }
+    
+}
 

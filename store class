@@ -35,8 +35,18 @@ public class store {
     
     public void addItem()
     {
+        item a[] = list;                
+        
         itemCount++;
-        list[itemCount] = new Item();
+               
+        list = new item[itemCount];
+        
+        for(int i = 0; i < itemCount - 1; i++)
+        {
+            list[i] = a[i];            
+        }
+        
+        list[itemCount - 1] = new item();
     }
     
     public void setItemName(int a, String b)

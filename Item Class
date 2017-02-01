@@ -71,38 +71,6 @@ public class Item {
     {
         num--;
     }
-    
-    public int getItemByName(String a)
-    {
-        int b = 0;
-        
-        boolean nameNotFound = true;
-               
-        while(nameNotFound && b < itemCount )
-        {
-            String d = list[b].getName();
-            
-            if (d.equals(a))
-            {
-                nameNotFound = false;
-                
-                    
-            }
-            else
-            {
-                b++;
-            }
-            
-        }     
-        if(nameNotFound && list[b].getNum()!= 0)
-        {
-            return b;
-        }
-        else
-        {
-            return -1;
-        }
-        
-    }
+   
             
 }

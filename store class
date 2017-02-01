@@ -1,6 +1,6 @@
 public class store {
     private String name, location, owner, phoneNum;
-    private item[] list;
+    private Item[] list;
     private int itemCount;
     
     public store()
@@ -9,7 +9,7 @@ public class store {
         location = "NJ";
         owner = "Bob";
         phoneNum = "973-123-4567";
-        list[0] = new item();
+        list[0] = new Item();
         itemCount = 1;
     }
     
@@ -36,7 +36,7 @@ public class store {
     public void addItem()
     {
         itemCount++;
-        list[itemCount] = new item();
+        list[itemCount] = new Item();
     }
     
     public void setItemName(int a, String b)

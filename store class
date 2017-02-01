@@ -46,7 +46,7 @@ public class store {
     
     public void setItemQuality(int a, String b)
     {
-        list[a].setQuality(b);
+        list[a].setType(b);
     }
     
     public void setItemStock(int a, int b)

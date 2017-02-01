@@ -79,7 +79,7 @@ public class store {
         
         boolean nameNotFound = true;
                
-        while(nameNotFound && b < itemCount )
+        while(!nameNotFound && b > itemCount )
         {
             String d = list[b].getName();
             

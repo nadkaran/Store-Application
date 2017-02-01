@@ -73,6 +73,11 @@ public class store {
        return c; 
     }
     
+       public int getItemCount()
+    {
+        return itemCount;
+    }
+    
     public int getItemByName(String a)
     {
         int b = 0;

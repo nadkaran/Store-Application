@@ -1,12 +1,12 @@
 public class Item {
-    private String name, quality;
+    private String name, type;
     private int num;
     private double cost, price;
     
     public Item()
     {
         name = "water";
-        quality = "tap";
+        type = "tap";
         num = 1;
         cost = 0;
         price = 2.50;
@@ -22,14 +22,14 @@ public class Item {
         return name;
     }
     
-    public void setQuality(String q)
+    public void setType(String t)
     {
-        quality = q;
+        type = t;
     }
     
-    public String getQuality()
+    public String getType()
     {
-        return quality;
+        return type;
     }
     
     public void setNum(int n)

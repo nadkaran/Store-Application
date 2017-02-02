@@ -150,5 +150,17 @@ public class store {
         
     }
     
+    public boolean check(int a)//checks if an is removed
+    {
+        if(list[a].getNum() == -2)
+        {
+            return false;
+        }
+        else 
+        {
+            return true;
+        }
+    }
+    
 }
 

@@ -1,6 +1,20 @@
         Scanner sc = new Scanner(System.in);
         Store first = new Store();
-        String operation = sc.nextLine();
+        
+        System.out.println("Please enter the name of the store:");
+        String storeName=sc.nextLine();
+        first.setName(storeName);
+        System.out.println("Please enter the location of the store:");
+        String storeLoc=sc.nextLine();
+        first.setLocation(storeLoc);
+        System.out.println("Please enter the owner of the store:");
+        String owner=sc.nextLine();
+        first.setLocation(owner);
+        System.out.println("Please enter the phone number of the store:");
+        String phoneNum=sc.nextLine();
+        first.setLocation(phoneNum);
+        
+        String operation = sc.nextLine(); //user now enters what they want to do
         if (operation.toLowerCase().equals("add item"))
         {
             first.addItem();
@@ -21,3 +35,13 @@
             first.setItemCost(place, cost);
             first.setItemPrice(place, price);    
         }
+        
+        System.out.println("Please enter the name of the item you would like to look up:");
+        String name = sc.next();
+        int loc = first.getItemByName(name);
+        Item[] list = new Item[10];
+        System.out.println("The name of the item is:" + first.getItemName(loc));
+        System.out.println("The type of the item is:" + first.getItemType(loc));
+        System.out.println("The quantity in stock is:" + first.getItemStock(loc));
+        System.out.println("The cost of the item is:" + first.getItemCost(loc));
+        System.out.println("The price of the item is:" + first.getItemPrice(loc));

@@ -52,6 +52,7 @@ public class store {
     public void removeItem(int a)
     {
         list[a].setNum(-2);
+        list[a].setName("");
     }
     
     public void setItemName(int a, String b)
@@ -66,7 +67,7 @@ public class store {
     
     public void setItemStock(int a, int b)
     {
-        list[a].setNum(b);
+        list[a].setNum(Math.abs(b));
     }
     
     public void setItemCost(int a, double b)

@@ -103,13 +103,30 @@ public class store {
     {
         return list[a].getPrice( );
     }
-    public double buyItem(int a)
+   
+   public String buyItem(int a, int n)
     {
-        double c = list[a].getPrice();
-        
-        list[a].buy();
-        
-       return c; 
+        String ans = "";
+        int s = list[a].getNum();
+        if(s<0)
+        {
+            ans = "The item does not exist in the store.";
+        }
+        else if (s==0)
+        {
+            ans = "The item is out of stock.";
+        }
+        else if(n>s)
+        {
+            ans = "There is not enough of the item in stock. Only " + s + " in stock.";
+        }
+        else if(s>n)
+        {
+            double c = n*list[a].getPrice();
+            ans = "Item is availiable, the total cost is: $"+ c;
+            list[a].buy(n);
+        }   
+       return ans; 
     }
     
        public int getItemCount()

@@ -67,9 +67,9 @@ public class Item {
         return itemCount;
     }
     
-    public void buy()
+    public void buy(int n)
     {
-        num--;
+        num-=n;
     }
    
             

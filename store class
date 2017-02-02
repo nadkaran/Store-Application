@@ -48,6 +48,11 @@ public class store {
         
         list[itemCount - 1] = new item();
     }
+        
+    public void removeItem(int a)
+    {
+        list[a].setNum(-2);
+    }
     
     public void setItemName(int a, String b)
     {

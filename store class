@@ -54,7 +54,7 @@ public class store {
         list[a].setName(b);
     }
     
-    public void setItemQuality(int a, String b)
+    public void setItemType(int a, String b)
     {
         list[a].setType(b);
     }
@@ -74,6 +74,30 @@ public class store {
         list[a].setPrice(b);
     }
     
+        public String getItemName(int a)
+    {
+        return list[a].getName();
+    }
+    
+    public String getItemType(int a)
+    {
+        return list[a].getType();
+    }
+    
+    public int getItemStock(int a)
+    {
+        return list[a].getNum();
+    }
+    
+    public double getItemCost(int a)
+    {
+        return list[a].getCost();
+    }
+    
+    public double getItemPrice(int a)
+    {
+        return list[a].getPrice( );
+    }
     public double buyItem(int a)
     {
         double c = list[a].getPrice();

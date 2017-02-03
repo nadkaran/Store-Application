@@ -1,7 +1,7 @@
 public class store {
     private String name, location, owner, phoneNum;
     private Item[] list;
-    private int itemCount;
+    private int itemCount, removedCount = 0;
     
     public store()
     {
@@ -53,6 +53,8 @@ public class store {
     {
         list[a].setNum(-2);
         list[a].setName("");
+        
+        removedCount++;
     }
     
     public void setItemName(int a, String b)
@@ -132,7 +134,7 @@ public class store {
     
        public int getItemCount()
     {
-        return itemCount;
+        return itemCount - removedCount;
     }
     
     public int getItemByName(String a)

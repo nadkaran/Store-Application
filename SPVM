@@ -54,7 +54,22 @@ Scanner sc = new Scanner(System.in);
                 }
                 else
                 {
-                        System.out.println("Item does not exist in store");
+                        System.out.println("Item does not exist in store.");
+                }
+            }
+            else if (operation.toLowerCase().equals("remove"))
+            {
+                System.out.println("What item would you like to remove?");
+                String r = sc.nextLine();
+                int locR = first.getItemByName(r);
+                if(locR>=0)
+                {
+                        first.removeItem(locR);
+                        System.out.println(r+" has been successfully removed from store.");
+                }
+                else
+                {
+                        System.out.println("Item does not exist in store.");
                 }
             }
             else if (operation.toLowerCase().contains("search"))
@@ -72,7 +87,7 @@ Scanner sc = new Scanner(System.in);
                 }
                 else
                 {
-                        System.out.println("Item does not exist in store");
+                        System.out.println("Item does not exist in store.");
                 }
             }
             else if (operation.toLowerCase().contains("exit"))

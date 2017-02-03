@@ -74,7 +74,7 @@ Scanner sc = new Scanner(System.in);
                 {
                         System.out.println("Item does not exist in store");
                 }
-        
+            }
             else if (operation.toLowerCase().contains("exit"))
             {
                 cont = false;

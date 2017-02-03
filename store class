@@ -35,18 +35,18 @@ public class store {
     
     public void addItem()
     {
-        item a[] = list;                
+        Item a[] = list;                
         
         itemCount++;
                
-        list = new item[itemCount];
+        list = new Item[itemCount];
         
         for(int i = 0; i < itemCount - 1; i++)
         {
             list[i] = a[i];            
         }
         
-        list[itemCount - 1] = new item();
+        list[itemCount - 1] = new Item();
     }
         
     public void removeItem(int a)

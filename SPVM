@@ -19,7 +19,7 @@ Scanner sc = new Scanner(System.in);
         
         while (cont!=false)
         {
-            String operation = sc.nextLine();
+            String operation = sc.next();
             if (operation.toLowerCase().contains("add"))
             {
                 first.addItem();

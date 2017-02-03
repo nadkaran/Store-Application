@@ -1,5 +1,5 @@
 Scanner sc = new Scanner(System.in);
-        Store first = new Store();
+        store first = new store();
         boolean cont = true;
         
         System.out.println("Please enter store information.");

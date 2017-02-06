@@ -159,7 +159,7 @@ public class store {
             }
             
         }     
-        if(!nameNotFound && list[b].getNum()!= 0)
+        if(!nameNotFound && list[b].getNum()>= 0)
         {
             return b;
         }

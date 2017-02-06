@@ -18,7 +18,6 @@
         String phoneNum=sc.nextLine();
         first.setLocation(phoneNum);
         
-        String operation="";
         while (cont!=false)
         {
             System.out.println("Would you like to buy, add, search or remove an item?");

@@ -83,11 +83,11 @@
                 int location = first.getItemByName(name);
                 if(location>=0)
                 {
-                        System.out.println("The name of the item is:" + first.getItemName(location));
-                        System.out.println("The type of the item is:" + first.getItemType(location));
-                        System.out.println("The quantity in stock is:" + first.getItemStock(location));
-                        System.out.println("The cost of the item is:" + form.format(first.getItemCost(location)));
-                        System.out.println("The price of the item is:" + form.format(first.getItemPrice(location)));
+                        System.out.println("The name of the item is: " + first.getItemName(location));
+                        System.out.println("The type of the item is: " + first.getItemType(location));
+                        System.out.println("The quantity in stock is: " + first.getItemStock(location));
+                        System.out.println("The cost of the item is: $" + form.format(first.getItemCost(location)));
+                        System.out.println("The price of the item is: $" + form.format(first.getItemPrice(location)));
                 }
                 else
                 {

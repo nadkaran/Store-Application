@@ -1,9 +1,10 @@
-Scanner sc = new Scanner(System.in);
+{
+        Scanner sc = new Scanner(System.in);
+        DecimalFormat form = new DecimalFormat("##.00");
         store first = new store();
         boolean cont = true;
         
-        System.out.println("Please enter store information.");
-        
+        System.out.println("Please enter store information."); 
         System.out.println("Please enter the name of the store:");
         String storeName=sc.nextLine();
         first.setName(storeName);
@@ -17,11 +18,11 @@ Scanner sc = new Scanner(System.in);
         String phoneNum=sc.nextLine();
         first.setLocation(phoneNum);
         
+        String operation="";
         while (cont!=false)
         {
-            System.out.println("Would you like to buy, add, search or remove an item?");
-            String operation = sc.nextLine();
-            if (operation.equals(""))
+            
+            System.out.println("Enter an operation");
             operation = sc.nextLine();
             if (operation.toLowerCase().contains("add"))
             {
@@ -29,7 +30,7 @@ Scanner sc = new Scanner(System.in);
                 System.out.println("What item would you like to add?");
                 String n = sc.nextLine();
                 System.out.println("Enter the type of " + n);
-                String q = sc.nextLine();
+                String t = sc.nextLine();
                 System.out.println("Enter the number of " + n + " in stock");
                 int num = sc.nextInt();
                 System.out.println("Enter the true cost of one " + n);
@@ -38,12 +39,12 @@ Scanner sc = new Scanner(System.in);
                 double price = sc.nextDouble();
                 int place = first.getItemCount()-1;
                 first.setItemName(place, n);
-                first.setItemType(place, q);
+                first.setItemType(place, t);
                 first.setItemStock(place, num);
                 first.setItemCost(place, cost);
                 first.setItemPrice(place, price);    
             }
-            else if(operation.toLowerCase().equals("buy"))
+            else if(operation.toLowerCase().contains("buy"))
             {
                 System.out.println("What item would you like to buy?");
                 String o = sc.nextLine();
@@ -60,7 +61,7 @@ Scanner sc = new Scanner(System.in);
                         System.out.println("Item does not exist in store.");
                 }
             }
-            else if (operation.toLowerCase().equals("remove"))
+            else if (operation.toLowerCase().contains("remove"))
             {
                 System.out.println("What item would you like to remove?");
                 String r = sc.nextLine();
@@ -78,15 +79,15 @@ Scanner sc = new Scanner(System.in);
             else if (operation.toLowerCase().contains("search"))
             {
                 System.out.println("Please enter the name of the item you would like to look up:");
-                String name = sc.next();
+                String name = sc.nextLine();
                 int location = first.getItemByName(name);
                 if(location>=0)
                 {
                         System.out.println("The name of the item is:" + first.getItemName(location));
                         System.out.println("The type of the item is:" + first.getItemType(location));
                         System.out.println("The quantity in stock is:" + first.getItemStock(location));
-                        System.out.println("The cost of the item is:" + first.getItemCost(location));
-                        System.out.println("The price of the item is:" + first.getItemPrice(location));
+                        System.out.println("The cost of the item is:" + form.format(first.getItemCost(location)));
+                        System.out.println("The price of the item is:" + form.format(first.getItemPrice(location)));
                 }
                 else
                 {
@@ -97,7 +98,5 @@ Scanner sc = new Scanner(System.in);
             {
                 cont = false;
             }
-        
-            else
-                System.out.println("Enter a valid operation");
         }
+}

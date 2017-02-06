@@ -19,7 +19,10 @@ Scanner sc = new Scanner(System.in);
         
         while (cont!=false)
         {
-            String operation = sc.next();
+            System.out.println("Would you like to buy, add, search or remove an item?");
+            String operation = sc.nextLine();
+            if (operation.equals(""))
+            operation = sc.nextLine();
             if (operation.toLowerCase().contains("add"))
             {
                 first.addItem();

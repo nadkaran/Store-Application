@@ -21,8 +21,9 @@
         String operation="";
         while (cont!=false)
         {
-            
-            System.out.println("Enter an operation");
+            System.out.println("Would you like to buy, add, search or remove an item?");
+            String operation = sc.nextLine();
+            if (operation.equals(""))
             operation = sc.nextLine();
             if (operation.toLowerCase().contains("add"))
             {

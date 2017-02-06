@@ -119,6 +119,10 @@ public class store {
         {
             ans = "The item is out of stock.";
         }
+        else if(n<0)
+        {
+            ans = "The number entered is not valid.";
+        }
         else if(n>s)
         {
             ans = "There is not enough of the item in stock. Only " + s + " in stock.";
@@ -137,21 +141,19 @@ public class store {
         return itemCount - removedCount;
     }
     
-    public int getItemByName(String a)
+   public int getItemByName(String a)
     {
         int b = 0;
         
         boolean nameNotFound = true;
                
-        while(!nameNotFound && b > itemCount )
+        while(nameNotFound && b < itemCount )
         {
             String d = list[b].getName();
             
             if (d.equals(a))
             {
                 nameNotFound = false;
-                
-                    
             }
             else
             {
@@ -159,15 +161,14 @@ public class store {
             }
             
         }     
-        if(!nameNotFound && list[b].getNum()>= 0)
+        if(!nameNotFound && list[b].getNum()!= 0)
         {
             return b;
         }
         else
         {
             return -1;
-        }
-        
+        }  
     }
     
     public boolean check(int a)//checks if an item is removed

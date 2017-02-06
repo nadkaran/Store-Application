@@ -1,7 +1,10 @@
+import java.text.DecimalFormat;
+
 public class store {
     private String name, location, owner, phoneNum;
     private Item[] list;
     private int itemCount, removedCount = 0;
+    DecimalFormat form = new DecimalFormat("##.00");
     
     public store()
     {
@@ -127,10 +130,10 @@ public class store {
         {
             ans = "There is not enough of the item in stock. Only " + s + " in stock.";
         }
-        else if(s>n)
+        else if(s>=n)
         {
             double c = n*list[a].getPrice();
-            ans = "Item is availiable, the total cost is: $"+ c;
+            ans = "Item is availiable, the total cost is: $"+ form.format(c);
             list[a].buy(n);
         }   
        return ans; 
